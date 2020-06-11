@@ -44,4 +44,7 @@ done
 #connmanctl enable gadget >/dev/null 2>&1
 #connmanctl tether gadget on >/dev/null 2>&1
 
-/sbin/ifconfig usb1 192.168.6.2 netmask 255.255.255.252 || true
+#/sbin/ifconfig usb1 192.168.6.2 netmask 255.255.255.252 || true
+
+## request IP instead
+/sbin/dhclient usb1
